@@ -1,90 +1,119 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fellas.pk - Student Services</title>
+  <title>Fellas.pk - Student Help Hub</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f9fc; color: #333; }
-    header { background: #4a90e2; color: white; padding: 20px; text-align: center; }
-    nav { background: #357ABD; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
-    nav a { color: white; text-decoration: none; font-weight: bold; }
-    .container { padding: 20px; }
-    .section { background: white; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    form input, form select, form textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
-    form input[type="submit"] { background: #25d366; color: white; border: none; font-weight: bold; cursor: pointer; }
-    footer { text-align: center; padding: 20px; background: #4a90e2; color: white; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #6a0dad;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    section {
+      padding: 2rem;
+    }
+    h2 {
+      color: #6a0dad;
+    }
+    .button {
+      display: inline-block;
+      background-color: #6a0dad;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .button:hover {
+      background-color: #4b0082;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #6a0dad;
+      color: white;
+    }
+    footer {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Fellas.pk</h1>
-    <p>Helping Students with Assignments, Projects, and More!</p>
+    <p>Your Partner for Assignments, Quizzes, and Projects</p>
   </header>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#quote">Get a Quote</a>
-    <a href="#contact">Contact</a>
-  </nav>
 
-  <div class="container" id="services">
-    <div class="section">
-      <h2>Our Services</h2>
-      <ul>
-        <li>📘 Handwritten Assignments</li>
-        <li>💻 Digital Assignments</li>
-        <li>💡 Coding Projects</li>
-        <li>📦 Physical Projects</li>
-        <li>❓ Quiz & Learning Support</li>
-      </ul>
-      <p>We provide high-quality, student-focused support at affordable prices. Choose what you need and let us handle the rest!</p>
-    </div>
-  </div>
+  <section>
+    <h2>Services We Offer</h2>
+    <ul>
+      <li>Handwritten Assignments</li>
+      <li>Digital Assignments</li>
+      <li>Quizzes & Solutions</li>
+      <li>Programming Projects</li>
+      <li>Physical/DIY Projects</li>
+    </ul>
+    <a class="button" href="https://forms.gle/YOUR_FORM_LINK" target="_blank">Submit Your Requirements</a>
+  </section>
 
-  <div class="container" id="quote">
-    <div class="section">
-      <h2>Get a Quote</h2>
-      <form onsubmit="return redirectToWhatsApp()">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="text" id="phone" placeholder="Your WhatsApp Number" required>
-        <select id="serviceType" required>
-          <option value="">Select Service</option>
-          <option>Handwritten Assignment</option>
-          <option>Digital Assignment</option>
-          <option>Coding Project</option>
-          <option>Physical Project</option>
-          <option>Quiz/Learning Help</option>
-        </select>
-        <textarea id="requirements" rows="4" placeholder="Describe your requirements in detail..." required></textarea>
-        <input type="submit" value="Send on WhatsApp">
-       
-      </form>
-    </div>
-  </div>
+  <section>
+    <h2>Pricing Table</h2>
+    <table>
+      <tr>
+        <th>Service Type</th>
+        <th>Starting Price</th>
+      </tr>
+      <tr>
+        <td>Handwritten Assignment</td>
+        <td>Rs. 250 / assignment</td>
+      </tr>
+      <tr>
+        <td>Digital Assignment</td>
+        <td>Rs. 200 / assignment</td>
+      </tr>
+      <tr>
+        <td>Quiz Assistance</td>
+        <td>Rs. 150 / quiz</td>
+      </tr>
+      <tr>
+        <td>Coding Project</td>
+        <td>Rs. 500 / project</td>
+      </tr>
+      <tr>
+        <td>Physical Project</td>
+        <td>Rs. 1000+ (depends on type)</td>
+      </tr>
+    </table>
+    <p><strong>Note:</strong> Prices may vary depending on requirements, deadlines, and complexity.</p>
+  </section>
 
-  <div class="container" id="contact">
-    <div class="section">
-      <h2>Contact Us</h2>
-      <p>WhatsApp: <a href="https://wa.me/923104497205" target="_blank">Chat Now</a></p>
-    </div>
-  </div>
+  <section>
+    <h2>Contact Us</h2>
+    <p>Click below to chat with us on WhatsApp:</p>
+    <a class="button" href="https://wa.me/923104497205" target="_blank">WhatsApp Us</a>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Fellas.pk | All Rights Reserved</p>
+    <p>&copy; 2025 Fellas.pk - All rights reserved.</p>
   </footer>
-
-  <script>
-    function redirectToWhatsApp() {
-      var name = document.getElementById('name').value;
-      var phone = document.getElementById('phone').value;
-      var serviceType = document.getElementById('serviceType').value;
-      var requirements = document.getElementById('requirements').value;
-      var message = `Name: ${name}%0AWhatsApp: ${phone}%0AService: ${serviceType}%0ARequirements: ${requirements}`;
-      var whatsappUrl = `https://wa.me/923104497205?text=${message}`;
-      window.open(whatsappUrl, '_blank');
-      return false;
-    }
-  </script>
 </body>
 </html>
