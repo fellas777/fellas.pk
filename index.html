@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fellas.pk - Student Services</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f9fc; color: #333; }
+    header { background: #4a90e2; color: white; padding: 20px; text-align: center; }
+    nav { background: #357ABD; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    .container { padding: 20px; }
+    .section { background: white; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    form input, form select, form textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    form input[type="submit"] { background: #25d366; color: white; border: none; font-weight: bold; cursor: pointer; }
+    footer { text-align: center; padding: 20px; background: #4a90e2; color: white; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fellas.pk</h1>
+    <p>Helping Students with Assignments, Projects, and More!</p>
+  </header>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#quote">Get a Quote</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container" id="services">
+    <div class="section">
+      <h2>Our Services</h2>
+      <ul>
+        <li>📘 Handwritten Assignments</li>
+        <li>💻 Digital Assignments</li>
+        <li>💡 Coding Projects</li>
+        <li>📦 Physical Projects</li>
+        <li>❓ Quiz & Learning Support</li>
+      </ul>
+      <p>We provide high-quality, student-focused support at affordable prices. Choose what you need and let us handle the rest!</p>
+    </div>
+  </div>
+
+  <div class="container" id="quote">
+    <div class="section">
+      <h2>Get a Quote</h2>
+      <form onsubmit="return redirectToWhatsApp()">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="phone" placeholder="Your WhatsApp Number" required>
+        <select id="serviceType" required>
+          <option value="">Select Service</option>
+          <option>Handwritten Assignment</option>
+          <option>Digital Assignment</option>
+          <option>Coding Project</option>
+          <option>Physical Project</option>
+          <option>Quiz/Learning Help</option>
+        </select>
+        <textarea id="requirements" rows="4" placeholder="Describe your requirements in detail..." required></textarea>
+        <input type="submit" value="Send on WhatsApp">
+      </form>
+    </div>
+  </div>
+
+  <div class="container" id="contact">
+    <div class="section">
+      <h2>Contact Us</h2>
+      <p>WhatsApp: <a href="https://wa.me/923104497205" target="_blank">Chat Now</a></p>
+      <p>Email: fellas.support@example.com</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Fellas.pk | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function redirectToWhatsApp() {
+      var name = document.getElementById('name').value;
+      var phone = document.getElementById('phone').value;
+      var serviceType = document.getElementById('serviceType').value;
+      var requirements = document.getElementById('requirements').value;
+      var message = `Name: ${name}%0AWhatsApp: ${phone}%0AService: ${serviceType}%0ARequirements: ${requirements}`;
+      var whatsappUrl = `https://wa.me/923104497205?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+      return false;
+    }
+  </script>
+</body>
+</html>
